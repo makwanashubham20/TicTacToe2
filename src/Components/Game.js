@@ -69,9 +69,15 @@ function Game(props){
     }
 
     function changeBoard(step){
-      var x = history[step].slice(0, 9);
-        setBoard(x);
-        setStep(step);
+      var x;
+      if(step===0){
+        x=["", "", "", "", "", "", "", "", ""];
+      }
+      else{
+      x = history[step].slice(0, 9);
+      }
+      setBoard(x);
+      setStep(step);
       }
 
       function resetGame(){
